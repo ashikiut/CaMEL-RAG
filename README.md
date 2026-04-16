@@ -51,7 +51,7 @@ In contrast, **CaMEL-RAG** significantly improved predictive accuracy for both e
 | **LLaMA 3.2-3B** | Reproduced reasonable magnitudes but occasionally **failed to predict the correct sign**, highlighting challenges in reasoning about reaction energetics. |
 ---
 
-![performance plot](./assets/scatter_plot.png)
+![performance plot](./assets/results.jpg)
 
 ---
 ## ⚙️ Setup
