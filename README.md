@@ -32,9 +32,23 @@ It uses a CSV file of domain documents, creates a vector store (`FAISS` + `Sente
 ---
 ## Performance
 
-In this framework, we hace used `gpt-4.1-mini` as the deafualt LLM. Any model can be used to generate the response based on the given query and the context retrieved from the vector. </br>
-With the default model, we have achieved a near perfect result. </br>
+**CaMEL-RAG** was evaluated for adsorption-energy prediction using two large language models: **gpt-4o-mini** and **LLaMA 3.2–3B**. Model predictions were compared against DFT-calculated adsorption energies using the following metrics:
 
+* **MAE:** Mean Absolute Error
+* **$R^2$:** Coefficient of Determination
+
+---
+
+### Key Findings
+
+As shown in the following figure, baseline LLMs exhibited substantial performance degradation under **zero-shot inference**, particularly for numerically intensive, domain-specific queries. 
+
+In contrast, **CaMEL-RAG** significantly improved predictive accuracy for both evaluated models by providing relevant contextual information.
+
+| Model | Performance Highlights |
+| :--- | :--- |
+| **gpt-4o-mini** | Achieved strong agreement with reference DFT values; correctly captured both **magnitude and sign** of adsorption energies. |
+| **LLaMA 3.2-3B** | Reproduced reasonable magnitudes but occasionally **failed to predict the correct sign**, highlighting challenges in reasoning about reaction energetics. |
 ---
 
 ![performance plot](./assets/scatter_plot.png)
